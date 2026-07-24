@@ -1,0 +1,57 @@
+# Build outputs
+build/
+out/
+x64/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
+*.exp
+*.lib
+moc_*
+*.moc
+ui_*.h
+qrc_*.cpp
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+CMakeLists.txt.user
+.qtcreator/
+.qtc_clangd/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.slnx
+
+# NuGet packages
+packages/
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Compiled resource files
+*.qrc.depends
+
+# CMake user presets
+CMakeUserPresets.json
+
+# Backup files
+*.bak

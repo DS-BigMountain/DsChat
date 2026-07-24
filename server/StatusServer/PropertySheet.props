@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>C:\boost\boost_1_91_0;C:\Users\17630\source\repos\StatusServer\packages\JsonCpp.Windows.1.9.2\build\native\include;C:\mysql-connector-c++-8.3.0-winx64\include;C:\Users\17630\source\repos\redis\deps\hiredis;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\boost\boost_1_91_0\stage\lib;C:\Users\17630\source\repos\StatusServer\packages\JsonCpp.Windows.1.9.2\build\native\x64\Debug;C:\mysql-connector-c++-8.3.0-winx64\lib64\vs14\debug;C:\mysql-connector-c++-8.3.0-winx64\lib64\vs14;C:\Users\17630\source\repos\redis\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>jsoncpp.lib;mysqlcppconn.lib;mysqlcppconn8.lib;hiredis.lib;Win32_Interop.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)config.ini  $(SolutionDir)$(Platform)\$(Configuration)\   /y
+xcopy $(ProjectDir)*.dll   $(SolutionDir)$(Platform)\$(Configuration)\   /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
